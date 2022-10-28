@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  color: #F9FAF8;
+}
+
+h2#features {
+  font-weight: 700;
+  font-size: 36px;
+  color: #1F2937;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  background-color: #3882F6;
+  border: none;
+  padding: 14px 16px;
+  font-size: 17px;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+button a {
+  color: #E5E7EB;
+}
+
+button:hover {
+  background-color: #F9FAF8;
+}
+button:hover a {
+  color: #3882F6;
+}
+
+.container, #footer {
+  background-color: #1F2937;
+  color: #E5E7EB;
+}
+
+.container {
+  min-height: 100vh;
+}
+
+#header,
+#welcome,
+main .features-container,
+.cta {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+#header .flex-logo-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#header .flex-logo-toggle .togglemenu {
+  display: block;
+  font-size: 20px;
+  padding: 8px 14px;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+#header #navbar {
+  display: none;
+  opacity: 0;
+  border-top: 1px solid #E5E7EB;
+  background-color: #F9FAF8;
+  transition: all 0.3s linear;
+}
+#header #navbar ul {
+  padding: 12px 10px;
+}
+#header #navbar ul li {
+  padding: 12px 10px;
+  margin: 12px 0;
+}
+#header #navbar ul a {
+  color: #3882F6;
+  font-size: inherit;
+  text-transform: uppercase;
+}
+#header #navbar ul a:hover {
+  color: #1F2937;
+}
+#header #navbar.active {
+  display: block;
+  opacity: 1;
+}
+
+#welcome * {
+  margin: 14px 0;
+}
+#welcome img {
+  display: block;
+  width: 95%;
+  max-width: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#main .features-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#main .features-container .feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+#main .features-container .feature .feature-title {
+  font-size: 24px;
+}
+#main .testimonials-container {
+  background-color: #E5E7EB;
+  padding: 2rem;
+}
+#main .testimonials-container .client-photo img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 1.5rem auto;
+}
+#main .testimonials-container .client-name {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+#main .testimonials-container .testimonial {
+  font-size: 36px;
+  font-weight: 300;
+  font-style: italic;
+  color: #1F2937;
+  margin-bottom: 16px;
+  text-align: center;
+}
+#main .cta {
+  margin: 20px auto;
+  background-color: #3882F6;
+  color: #F9FAF8;
+  text-align: center;
+  padding: 10px 0;
+}
+#main .cta * {
+  margin-bottom: 12px;
+}
+#main .cta h3 {
+  font-size: 30px;
+  text-transform: capitalize;
+}
+#main .cta .cta-btn {
+  border: 2px solid #F9FAF8;
+}
+
+#footer {
+  padding: 20px 0;
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+  #main .testimonials-container .testimonial {
+    font-size: 20px;
+  }
+}
+@media (min-width: 650px) {
+  #main .features-container {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 30px;
+  }
+  #main .cta {
+    text-align: left;
+    padding: 10px 0;
+  }
+  #main .cta .cta-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+  }
+}
+@media (min-width: 900px) {
+  #header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #header .flex-logo-toggle .togglemenu {
+    display: none;
+  }
+  #header #navbar {
+    display: block;
+    opacity: 1;
+    background-color: transparent;
+    border: none;
+  }
+  #header #navbar ul {
+    display: flex;
+    padding: 12px 10px;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+  }
+  #header #navbar ul li {
+    padding: 12px 10px;
+  }
+  #header #navbar ul a {
+    color: #E5E7EB;
+    font-size: inherit;
+    text-transform: uppercase;
+  }
+  #header #navbar ul a:hover {
+    color: #3882F6;
+  }
+  #welcome {
+    display: flex;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  }
+  #welcome .welcome-flex-left, #welcome .welcome-flex-right {
+    flex: 50%;
+  }
+  #welcome * {
+    margin: 14px 0;
+  }
+  #welcome img {
+    display: block;
+    width: 100%;
+    max-width: unset;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 100%;
+    border: 6px;
+  }
+}
+@media (min-width: 1170px) {
+  #main .features-container {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 30px;
+  }
+  #main .cta .cta-btn {
+    border: 2px solid #F9FAF8;
+    padding: 14px 16px;
+    font-size: 20px;
+    text-transform: capitalize;
+  }
+}/*# sourceMappingURL=styles.css.map */
